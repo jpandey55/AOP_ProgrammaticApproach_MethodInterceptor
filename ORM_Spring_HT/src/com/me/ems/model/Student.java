@@ -34,5 +34,7 @@ public class Student {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+	public void print(){
+		System.out.println("Id: "+this.id+" Name: "+this.name+" Email: "+this.email+" Address: "+this.address);
+	}
 }

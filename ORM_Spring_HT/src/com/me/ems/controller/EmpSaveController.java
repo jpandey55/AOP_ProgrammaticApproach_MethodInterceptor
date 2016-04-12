@@ -32,20 +32,28 @@ public class EmpSaveController extends HttpServlet {
 		String name = req.getParameter("name");
 		String email = req.getParameter("email");
 		String address = req.getParameter("address");
-		
-		//send data to business
+		int pk =  Integer.parseInt(req.getParameter("pk"));
+	
+		StudentDaoImpl s = (StudentDaoImpl) cap.getBean("dao");
+	/*
+	 	//send data to business
 		Student st = new Student();
 		st.setAddress(address);
 		st.setEmail(email);
 		st.setId(id);
 		st.setName(name);
 		
-		StudentDaoImpl s = (StudentDaoImpl) cap.getBean("dao");
+		
+		
 		int i = s.save(st);
 		if(i!=0)
 			System.out.println("Success");
 		else
 			System.out.println("failed");
+	*/
+		//Search Database
+		Student s1 = s.find(pk);
+		s1.print();
 	}
 
 }
