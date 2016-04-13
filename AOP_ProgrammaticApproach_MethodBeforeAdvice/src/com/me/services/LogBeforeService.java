@@ -13,7 +13,7 @@ public class LogBeforeService implements MethodBeforeAdvice {
 	@Override
 	public void before(Method m, Object[] param, Object o) throws Throwable {
 		Log l = LogFactory.getLog(Bank.class);
-		l.info("Deposite Method...");
+		l.info("Executing Service before Deposite Method");
 		
 	}
 
